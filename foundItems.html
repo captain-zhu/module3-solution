@@ -1,0 +1,11 @@
+<p ng-if="!list.display" style="margin-top: 40px;">Nothing found</p>
+<ul ng-if="list.display" class="container" style="margin-top: 20px;">
+  <li ng-repeat="item in list.items" class="row">
+    <div class="col-md-8">
+      {{ item.name }}<br>
+      {{ item.short_name }}<br>
+      {{ item.description }}
+    </div>
+    <button class="col-md-4" ng-click="list.onRemove({index: $index})">Don't want this one!</button>`
+  </li>
+</ul>
